@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
 
 namespace Hostel_Management_System
@@ -16,7 +17,9 @@ namespace Hostel_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //Application.Run(new Form1());
+            spalsh splash_screen = new spalsh();
+            Application.Run(splash_screen);
         }
     }
 }
