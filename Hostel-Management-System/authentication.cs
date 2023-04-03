@@ -22,16 +22,8 @@ namespace Hostel_Management_System
             InitializeComponent();
         }
 
-        private void bunifuLabel1_Click(object sender, EventArgs e)
+        private void loguser(string username, string password)
         {
-
-        }
-
-        private void bunifuButton1_Click(object sender, EventArgs e)
-        {
-            string username = bunifuTextBox1.Text;
-            string password = bunifuTextBox2.Text;
-
             DBConnection db = new DBConnection();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
@@ -46,20 +38,19 @@ namespace Hostel_Management_System
 
             if (dt.Rows.Count > 0)
             {
-                //this.DialogResult = DialogResult.OK;
-                MessageBox.Show("Authorized User");
+                this.DialogResult = DialogResult.OK;
+                dashboard dashboard = new dashboard();
+                this.Hide();
+                dashboard.Show();
+
             }
             else
             {
-                MessageBox.Show("NO");
+                MessageBox.Show("Invalid Credentials");
             }
         }
 
         private int cnt = 1;
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-        }
         
 
         private void bunifuToggleSwitch21_CheckedChanged(object sender, EventArgs e)
@@ -140,8 +131,16 @@ namespace Hostel_Management_System
            
         }
 
-       // Form2 obj1 = new Form2();
-       // obj1.Show();
-       // this.Hide();
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            string username = bunifuTextBox1.Text;
+            string password = bunifuTextBox2.Text;
+
+            loguser(username, password);
+        }
+
+        // Form2 obj1 = new Form2();
+        // obj1.Show();
+        // this.Hide();
     }
 }

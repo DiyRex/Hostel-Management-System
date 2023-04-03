@@ -626,7 +626,6 @@
             this.grpbox2.TabIndex = 5;
             this.grpbox2.TabStop = false;
             this.grpbox2.Text = "Please Signup Here";
-            this.grpbox2.Enter += new System.EventHandler(this.bunifuGroupBox1_Enter);
             // 
             // bunifuLabel10
             // 
