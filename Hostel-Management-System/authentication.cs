@@ -20,6 +20,8 @@ namespace Hostel_Management_System
         public authentication()
         {
             InitializeComponent();
+            this.ActiveControl = username;
+            username.Focus();
         }
 
         private void loguser(string username, string password)
@@ -42,7 +44,6 @@ namespace Hostel_Management_System
                 dashboard dashboard = new dashboard();
                 this.Hide();
                 dashboard.Show();
-
             }
             else
             {
@@ -51,25 +52,18 @@ namespace Hostel_Management_System
         }
 
         private int cnt = 1;
-        
+
 
         private void bunifuToggleSwitch21_CheckedChanged(object sender, EventArgs e)
         {
             if (bunifuToggleSwitch21.Checked)
             {
-                //grpbox1.Visible = false;
                 grpbox1.Visible = false;
             }
             else
             {
-               // grpbox1.Visible = true;
                 grpbox1.Visible = true;
             }
-        }
-
-        private void bunifuGroupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void bunifuTextBox5_TextChanged(object sender, EventArgs e)
@@ -90,7 +84,7 @@ namespace Hostel_Management_System
             try
             {
                 databaseConnection.Open();
-                
+
                 try
                 {
                     reader = commandDatabase.ExecuteReader();
@@ -101,7 +95,7 @@ namespace Hostel_Management_System
                         bunifuToggleSwitch21.Checked = false;
                     }
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Console.WriteLine(e.ToString());
                 }
@@ -124,23 +118,27 @@ namespace Hostel_Management_System
 
             if (authkey == verifiedKey)
             {
-                InsertData(username:username, password:password, email:email);
+                InsertData(username: username, password: password, email: email);
             }
             else { MessageBox.Show("Invalid AuthKey !!"); }
 
-           
+
         }
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            string username = bunifuTextBox1.Text;
+            string username = this.username.Text;
             string password = bunifuTextBox2.Text;
-
             loguser(username, password);
         }
 
-        // Form2 obj1 = new Form2();
-        // obj1.Show();
-        // this.Hide();
+        private void username_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                bunifuTextBox2.Focus();
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -13,40 +13,30 @@ namespace Hostel_Management_System
 {
     public partial class dashboard : Form
     {
-        DataTable dt = new DataTable();
+
 
         public dashboard()
         {
             InitializeComponent();
         }
-        private void addData()
+        
+
+        private void btnStudents_Click(object sender, EventArgs e)
         {
-            DBConnection db = new DBConnection();
-
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-
-            MySqlCommand cmd = new MySqlCommand("SELECT * FROM `users`", db.getConnection);
-
-            adapter.SelectCommand = cmd;
-            adapter.Fill(dt);
-            foreach (DataRow dr in dt.Rows)
-            {
-
-                bunifuDataGridView1.Rows.Add(dr.ItemArray);
-                // //DataGridViewButtonColumn button = new DataGridViewButtonColumn();
-                // {
-                //    button.Name = "button";
-                //     button.HeaderText = "Button";
-                //    button.Text = "Button";
-                //    button.UseColumnTextForButtonValue = true; //dont forget this line
-                //    this.bunifuDataGridView1.Columns.Add(button);
-                // }
-
-            }
+            this.studentsPanal.Show();
+            this.dashboardPanal.Hide();
         }
-        private void dashboard_Load(object sender, EventArgs e)
+
+        private void btnDashboard_Click(object sender, EventArgs e)
         {
-            addData();
+            this.studentsPanal.Hide();
+            this.dashboardPanal.Show();
+        }
+
+        private void dashboardPanal_Load(object sender, EventArgs e)
+        {
+            this.studentsPanal.Hide();
+            this.dashboardPanal.Show();
         }
     }
 }

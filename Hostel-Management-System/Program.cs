@@ -18,8 +18,11 @@ namespace Hostel_Management_System
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
-            spalsh splash_screen = new spalsh();
-            Application.Run(splash_screen);
+
+            //spalsh splash_screen = new spalsh();
+            //Application.Run(splash_screen);
+            dashboard dash = new dashboard();
+            Application.Run(dash);
         }
     }
 }
