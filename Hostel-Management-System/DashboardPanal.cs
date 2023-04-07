@@ -16,5 +16,15 @@ namespace Hostel_Management_System
         {
             InitializeComponent();
         }
+
+        private void DashboardPanal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

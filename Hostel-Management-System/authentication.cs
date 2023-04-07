@@ -16,6 +16,7 @@ namespace Hostel_Management_System
     public partial class authentication : Form
     {
         public object BunifuTextBox1 { get; private set; }
+        public static string session_user;
 
         public authentication()
         {
@@ -26,6 +27,7 @@ namespace Hostel_Management_System
 
         private void loguser(string username, string password)
         {
+            
             DBConnection db = new DBConnection();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
@@ -40,10 +42,11 @@ namespace Hostel_Management_System
 
             if (dt.Rows.Count > 0)
             {
+                session_user = username;
                 this.DialogResult = DialogResult.OK;
-                dashboard dashboard = new dashboard();
+                MainWIndow dash = new MainWIndow();
                 this.Hide();
-                dashboard.Show();
+                dash.Show();
             }
             else
             {

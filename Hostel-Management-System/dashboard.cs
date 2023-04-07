@@ -1,12 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace Hostel_Management_System
@@ -19,24 +11,48 @@ namespace Hostel_Management_System
         {
             InitializeComponent();
         }
-        
+
 
         private void btnStudents_Click(object sender, EventArgs e)
         {
-            this.studentsPanal.Show();
-            this.dashboardPanal.Hide();
+            //this.studentsPanal.Show();
+            //this.dashboardPanal.Hide();
+            // this.btnStudents.BackColor = Color.FromArgb(23, 110, 196);
+
+
+
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            this.studentsPanal.Hide();
-            this.dashboardPanal.Show();
+            //this.studentsPanal.Hide();
+            //this.dashboardPanal.Show();
+
         }
 
         private void dashboardPanal_Load(object sender, EventArgs e)
         {
-            this.studentsPanal.Hide();
-            this.dashboardPanal.Show();
+            //this.studentsPanal.Hide();
+            //this.dashboardPanal.Show();
+        }
+
+        private void dashboardPanal_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dashboard_Load(object sender, EventArgs e)
+        {
+            //if (authentication.session_user != null)
+            //{
+            //    lblLoggedUsr.Text = authentication.session_user;
+            //    Refresh();
+            //}
+            //else
+            //{
+            //    lblLoggedUsr.Text = "No User";
+            //}
+
         }
     }
 }

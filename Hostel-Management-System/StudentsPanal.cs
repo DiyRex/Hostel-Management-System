@@ -32,14 +32,6 @@ namespace Hostel_Management_System
             {
 
                 bunifuDataGridView1.Rows.Add(dr.ItemArray);
-                // //DataGridViewButtonColumn button = new DataGridViewButtonColumn();
-                // {
-                //    button.Name = "button";
-                //     button.HeaderText = "Button";
-                //    button.Text = "Button";
-                //    button.UseColumnTextForButtonValue = true; //dont forget this line
-                //    this.bunifuDataGridView1.Columns.Add(button);
-                // }
 
             }
         }
@@ -51,6 +43,17 @@ namespace Hostel_Management_System
         private void bunifuLabel2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuIconButton4_Click(object sender, EventArgs e)
+        {
+            StudentProfileUpdate bio = new StudentProfileUpdate();
+            bio.Show();
         }
     }
 }

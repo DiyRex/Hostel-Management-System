@@ -19,9 +19,9 @@ namespace Hostel_Management_System
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
 
-            //spalsh splash_screen = new spalsh();
-            //Application.Run(splash_screen);
-            dashboard dash = new dashboard();
+            spalsh splash_screen = new spalsh();
+           // Application.Run(splash_screen);
+            MainWIndow dash = new MainWIndow(); 
             Application.Run(dash);
         }
     }

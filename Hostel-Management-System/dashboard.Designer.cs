@@ -50,8 +50,6 @@
             this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panal = new Bunifu.UI.WinForms.BunifuPanel();
-            this.dashboardPanal = new Hostel_Management_System.DashboardPanal();
-            this.studentsPanal = new Hostel_Management_System.StudentsPanal();
             this.bunifuGradientPanel1.SuspendLayout();
             this.btnPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).BeginInit();
@@ -181,12 +179,12 @@
             this.lblLoggedUsr.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblLoggedUsr.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblLoggedUsr.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.lblLoggedUsr.Location = new System.Drawing.Point(110, 140);
+            this.lblLoggedUsr.Location = new System.Drawing.Point(110, 149);
             this.lblLoggedUsr.Name = "lblLoggedUsr";
             this.lblLoggedUsr.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblLoggedUsr.Size = new System.Drawing.Size(46, 19);
+            this.lblLoggedUsr.Size = new System.Drawing.Size(35, 19);
             this.lblLoggedUsr.TabIndex = 3;
-            this.lblLoggedUsr.Text = "Devin";
+            this.lblLoggedUsr.Text = "user";
             this.lblLoggedUsr.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblLoggedUsr.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -197,7 +195,7 @@
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel1.Location = new System.Drawing.Point(88, 109);
+            this.bunifuLabel1.Location = new System.Drawing.Point(88, 118);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(93, 25);
@@ -264,7 +262,7 @@
             this.btnServices.IconMarginLeft = 11;
             this.btnServices.IconPadding = 10;
             this.btnServices.IconRight = null;
-            this.btnServices.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnServices.IconRightAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnServices.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btnServices.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnServices.IconSize = 25;
@@ -311,10 +309,10 @@
             this.btnServices.OnPressedState.IconRightImage = null;
             this.btnServices.Size = new System.Drawing.Size(236, 59);
             this.btnServices.TabIndex = 3;
-            this.btnServices.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnServices.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnServices.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnServices.TextMarginLeft = 0;
-            this.btnServices.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnServices.TextPadding = new System.Windows.Forms.Padding(65, 0, 0, 0);
             this.btnServices.UseDefaultRadiusAndThickness = true;
             // 
             // btnRooms
@@ -403,10 +401,10 @@
             this.btnRooms.OnPressedState.IconRightImage = null;
             this.btnRooms.Size = new System.Drawing.Size(236, 59);
             this.btnRooms.TabIndex = 2;
-            this.btnRooms.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRooms.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRooms.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnRooms.TextMarginLeft = 0;
-            this.btnRooms.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnRooms.TextPadding = new System.Windows.Forms.Padding(65, 0, 0, 0);
             this.btnRooms.UseDefaultRadiusAndThickness = true;
             // 
             // btnStudents
@@ -495,10 +493,10 @@
             this.btnStudents.OnPressedState.IconRightImage = null;
             this.btnStudents.Size = new System.Drawing.Size(236, 59);
             this.btnStudents.TabIndex = 1;
-            this.btnStudents.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnStudents.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStudents.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnStudents.TextMarginLeft = 0;
-            this.btnStudents.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnStudents.TextPadding = new System.Windows.Forms.Padding(65, 0, 0, 0);
             this.btnStudents.UseDefaultRadiusAndThickness = true;
             this.btnStudents.Click += new System.EventHandler(this.btnStudents_Click);
             // 
@@ -588,10 +586,10 @@
             this.btnDashboard.OnPressedState.IconRightImage = null;
             this.btnDashboard.Size = new System.Drawing.Size(236, 59);
             this.btnDashboard.TabIndex = 0;
-            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnDashboard.TextMarginLeft = 0;
-            this.btnDashboard.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnDashboard.TextPadding = new System.Windows.Forms.Padding(65, 0, 0, 0);
             this.btnDashboard.UseDefaultRadiusAndThickness = true;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
@@ -644,27 +642,11 @@
             this.panal.BorderColor = System.Drawing.Color.Transparent;
             this.panal.BorderRadius = 3;
             this.panal.BorderThickness = 1;
-            this.panal.Controls.Add(this.dashboardPanal);
-            this.panal.Controls.Add(this.studentsPanal);
             this.panal.Location = new System.Drawing.Point(289, 46);
             this.panal.Name = "panal";
             this.panal.ShowBorders = true;
             this.panal.Size = new System.Drawing.Size(705, 531);
             this.panal.TabIndex = 3;
-            // 
-            // dashboardPanal
-            // 
-            this.dashboardPanal.Location = new System.Drawing.Point(-7, 0);
-            this.dashboardPanal.Name = "dashboardPanal";
-            this.dashboardPanal.Size = new System.Drawing.Size(697, 554);
-            this.dashboardPanal.TabIndex = 1;
-            // 
-            // studentsPanal
-            // 
-            this.studentsPanal.Location = new System.Drawing.Point(3, 0);
-            this.studentsPanal.Name = "studentsPanal";
-            this.studentsPanal.Size = new System.Drawing.Size(687, 556);
-            this.studentsPanal.TabIndex = 0;
             // 
             // dashboard
             // 
@@ -678,6 +660,7 @@
             this.Name = "dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.dashboard_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             this.btnPanel.ResumeLayout(false);
@@ -706,7 +689,5 @@
         private Bunifu.UI.WinForms.BunifuPanel panal;
         private Bunifu.UI.WinForms.BunifuLabel lblLoggedUsr;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private DashboardPanal dashboardPanal;
-        private StudentsPanal studentsPanal;
     }
 }
